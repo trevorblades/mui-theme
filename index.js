@@ -1,5 +1,5 @@
-import blueGrey from '@material-ui/core/colors/blueGrey';
-import indigo from '@material-ui/core/colors/indigo';
+import {default as grey} from '@material-ui/core/colors/blueGrey';
+import {default as primary} from '@material-ui/core/colors/indigo';
 import {createMuiTheme} from '@material-ui/core/styles';
 
 const title = {
@@ -13,6 +13,11 @@ const display1 = {
   color: defaultTheme.palette.text.primary
 };
 
+const gradient = [primary[500], primary[900]].toString();
+export function getLinearGradient(position) {
+  return `linear-gradient(${position}, ${gradient})`;
+}
+
 export default createMuiTheme({
   overrides: {
     MuiPickersDay: {
@@ -22,8 +27,8 @@ export default createMuiTheme({
     }
   },
   palette: {
-    primary: indigo,
-    grey: blueGrey
+    primary,
+    grey
   },
   typography: {
     fontFamily: "'Inconsolata', monospace",
