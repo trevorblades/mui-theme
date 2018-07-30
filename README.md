@@ -10,6 +10,12 @@ A custom theme for use with the [Material-UI React component library](https://ma
 npm install @trevorblades/mui-theme @material-ui/core
 ```
 
+Copy the following code into the `<head>` of your HTML document:
+
+```html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+```
+
 ## Usage
 
 ```js
