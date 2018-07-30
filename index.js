@@ -14,7 +14,7 @@ const display1 = {
 };
 
 const gradient = [primary[500], primary[900]].toString();
-export function getLinearGradient(position) {
+export function getLinearGradient(position = 'to bottom right') {
   return `linear-gradient(${position}, ${gradient})`;
 }
 
