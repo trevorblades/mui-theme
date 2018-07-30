@@ -14,12 +14,28 @@ npm install @trevorblades/mui-theme @material-ui/core
 
 ```js
 import Typography from '@material-ui/core/Typography';
-import {MuiThemeProvider} from '@material-ui/core/styles';
 import theme from '@trevorblades/mui-theme';
+import {MuiThemeProvider} from '@material-ui/core/styles';
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
     <Typography variant="headline">Hello world!</Typography>
   </MuiThemeProvider>
 );
+```
+
+### getLinearGradient(position)
+
+Returns a CSS linear gradient definition using the primary palette colour. By default, the gradient moves from the top left to bottom right, but you can pass any valid [`angle` or `side-or-corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) argument.
+
+```js
+import {getLinearGradient} from '@trevorblades/mui-theme';
+
+getLinearGradient();
+```
+
+This will produce the following output:
+
+```less
+linear-gradient(to bottom right, #3f51b5, #1a237e)
 ```
