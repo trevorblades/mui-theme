@@ -1,0 +1,30 @@
+{
+  "name": "@trevorblades/mui-theme",
+  "version": "1.0.0",
+  "author": "Trevor Blades <tdblades@gmail.com>",
+  "description": "A theme for use with Material-UI",
+  "repository": "github:trevorblades/mui-theme",
+  "license": "ISC",
+  "keywords": [
+    "material-ui",
+    "mui",
+    "theme"
+  ],
+  "main": "lib/index.js",
+  "module": "index.js",
+  "scripts": {
+    "pretest": "eslint index.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepare": "babel index.js --out-dir lib --presets=@babel/env"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.55",
+    "@babel/core": "^7.0.0-beta.55",
+    "@babel/preset-env": "^7.0.0-beta.55",
+    "@knoword/eslint-config": "^6.13.0",
+    "eslint": "^5.2.0"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^1.4.2"
+  }
+}
