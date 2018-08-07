@@ -20,6 +20,11 @@ export function getLinearGradient(position = 'to bottom right') {
 
 export default createMuiTheme({
   overrides: {
+    MuiFormControlLabel: {
+      label: {
+        lineHeight: 1
+      }
+    },
     MuiPickersDay: {
       day: {
         fontWeight: 400
