@@ -1,5 +1,5 @@
-const grey = require('@material-ui/core/colors/blueGrey');
-const primary = require('@material-ui/core/colors/indigo');
+const {default: grey} = require('@material-ui/core/colors/blueGrey');
+const {default: primary} = require('@material-ui/core/colors/indigo');
 const {createMuiTheme} = require('@material-ui/core/styles');
 
 const title = {
