@@ -12,7 +12,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint index.js get-linear-gradient.js",
+    "pretest": "eslint index.js",
     "test": "exit"
   },
   "devDependencies": {
