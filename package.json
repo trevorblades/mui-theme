@@ -3,24 +3,19 @@
   "version": "1.2.1",
   "author": "Trevor Blades <tdblades@gmail.com>",
   "description": "A custom theme for use with Material-UI",
-  "repository": "github:trevorblades/mui-theme",
+  "repository": "trevorblades/mui-theme",
   "license": "ISC",
   "keywords": [
     "material-ui",
     "mui",
     "theme"
   ],
-  "main": "lib/index.js",
-  "module": "index.js",
+  "main": "index.js",
   "scripts": {
-    "pretest": "eslint index.js",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "prepare": "babel index.js --out-dir lib --presets=@babel/env"
+    "pretest": "eslint index.js get-linear-gradient.js",
+    "test": "exit"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.55",
-    "@babel/core": "^7.0.0-beta.55",
-    "@babel/preset-env": "^7.0.0-beta.55",
     "@trevorblades/eslint-config": "^6.13.2",
     "eslint": "^5.2.0"
   },

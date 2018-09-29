@@ -1,6 +1,6 @@
-import {default as grey} from '@material-ui/core/colors/blueGrey';
-import {default as primary} from '@material-ui/core/colors/indigo';
-import {createMuiTheme} from '@material-ui/core/styles';
+const grey = require('@material-ui/core/colors/blueGrey');
+const primary = require('@material-ui/core/colors/indigo');
+const {createMuiTheme} = require('@material-ui/core/styles');
 
 const title = {
   fontFamily: "'Helvetica Neue', Helvetica, sans-serif",
@@ -13,12 +13,7 @@ const display1 = {
   color: defaultTheme.palette.text.primary
 };
 
-const gradient = [primary[500], primary[900]].toString();
-export function getLinearGradient(position = 'to bottom right') {
-  return `linear-gradient(${position}, ${gradient})`;
-}
-
-export default createMuiTheme({
+module.exports = createMuiTheme({
   overrides: {
     MuiFormControlLabel: {
       label: {
