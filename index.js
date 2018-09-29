@@ -13,35 +13,34 @@ const display1 = {
   color: defaultTheme.palette.text.primary
 };
 
-module.exports = {
-  default: createMuiTheme({
-    overrides: {
-      MuiFormControlLabel: {
-        label: {
-          lineHeight: 1
-        }
-      },
-      MuiPickersDay: {
-        day: {
-          fontWeight: 400
-        }
+module.exports = createMuiTheme({
+  overrides: {
+    MuiFormControlLabel: {
+      label: {
+        lineHeight: 1
       }
     },
-    palette: {
-      primary,
-      grey
-    },
-    typography: {
-      fontFamily: "'Inconsolata', monospace",
-      fontSize: 16,
-      fontWeightMedium: 700,
-      title,
-      headline: title,
-      display1,
-      display2: display1,
-      display3: display1
+    MuiPickersDay: {
+      day: {
+        fontWeight: 400
+      }
     }
-  }),
-  getLinearGradient: (position = 'to bottom right') =>
-    `linear-gradient(${[position, primary[500], primary[900]]})`
-};
+  },
+  palette: {
+    primary,
+    grey
+  },
+  typography: {
+    fontFamily: "'Inconsolata', monospace",
+    fontSize: 16,
+    fontWeightMedium: 700,
+    title,
+    headline: title,
+    display1,
+    display2: display1,
+    display3: display1
+  }
+});
+
+module.exports.getLinearGradient = (position = 'to bottom right') =>
+  `linear-gradient(${[position, primary[500], primary[900]]})`;
