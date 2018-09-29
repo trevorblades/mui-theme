@@ -1,13 +1,13 @@
 # @trevorblades/mui-theme
 
-[![CircleCI](https://circleci.com/gh/trevorblades/mui-theme.svg?style=shield)](https://circleci.com/gh/trevorblades/mui-theme)
+[![Build Status](https://travis-ci.com/trevorblades/mui-theme.svg?branch=master)](https://travis-ci.com/trevorblades/mui-theme)
 
 A custom theme for use with the [Material-UI React component library](https://material-ui.com/). This theme uses [Inconsolata](https://fonts.google.com/specimen/Inconsolata) so make sure you import that from Google Fonts in some way.
 
 ## Installation
 
-```
-npm install @trevorblades/mui-theme @material-ui/core
+```shell
+$ npm install @trevorblades/mui-theme @material-ui/core
 ```
 
 Copy the following code into the `<head>` of your HTML document:
