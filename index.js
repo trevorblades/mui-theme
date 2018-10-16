@@ -2,15 +2,9 @@ const {default: grey} = require('@material-ui/core/colors/blueGrey');
 const {default: primary} = require('@material-ui/core/colors/indigo');
 const {createMuiTheme} = require('@material-ui/core/styles');
 
-const title = {
+const heading = {
   fontFamily: "'Helvetica Neue', Helvetica, sans-serif",
   fontWeight: 700
-};
-
-const defaultTheme = createMuiTheme();
-const display1 = {
-  ...title,
-  color: defaultTheme.palette.text.primary
 };
 
 module.exports = createMuiTheme({
@@ -31,14 +25,16 @@ module.exports = createMuiTheme({
     grey
   },
   typography: {
+    useNextVariants: true,
     fontFamily: "'Inconsolata', monospace",
     fontSize: 16,
     fontWeightMedium: 700,
-    title,
-    headline: title,
-    display1,
-    display2: display1,
-    display3: display1
+    h1: heading,
+    h2: heading,
+    h3: heading,
+    h4: heading,
+    h5: heading,
+    h6: heading
   }
 });
 
