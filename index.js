@@ -1,13 +1,14 @@
 const {default: grey} = require('@material-ui/core/colors/blueGrey');
 const {default: primary} = require('@material-ui/core/colors/indigo');
 const {createMuiTheme} = require('@material-ui/core/styles');
+const merge = require('lodash/merge');
 
 const heading = {
   fontFamily: "'Helvetica Neue', Helvetica, sans-serif",
   fontWeight: 700
 };
 
-module.exports = createMuiTheme({
+const defaults = {
   overrides: {
     MuiFormControlLabel: {
       label: {
@@ -36,7 +37,13 @@ module.exports = createMuiTheme({
     h5: heading,
     h6: heading
   }
-});
+};
 
+function createTheme(options = {}) {
+  return createMuiTheme(merge(defaults, options));
+}
+
+module.exports = createTheme();
+module.exports.createTheme = createTheme;
 module.exports.getLinearGradient = (position = 'to bottom right') =>
   `linear-gradient(${[position, primary[500], primary[900]]})`;
