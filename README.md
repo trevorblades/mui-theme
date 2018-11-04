@@ -30,6 +30,20 @@ ReactDOM.render(
 );
 ```
 
+### createTheme(options)
+
+Merges your provided theme options my defaults. You can use this function to create a variation on this theme.
+
+```js
+import {createTheme} from '@trevorblades/mui-theme';
+
+const theme = createTheme({
+  palette: {
+    type: 'dark
+  }
+});
+```
+
 ### getLinearGradient(position)
 
 Returns a CSS linear gradient definition using the primary palette colour. By default, the gradient moves from the top left to bottom right, but you can pass any valid [`angle` or `side-or-corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) to the `position` argument.
@@ -37,11 +51,11 @@ Returns a CSS linear gradient definition using the primary palette colour. By de
 ```js
 import {getLinearGradient} from '@trevorblades/mui-theme';
 
-getLinearGradient();
+getLinearGradient('to top left');
 ```
 
 This will produce the following output:
 
 ```less
-linear-gradient(to bottom right, #3f51b5, #1a237e)
+linear-gradient(to top left, #3f51b5, #1a237e)
 ```
