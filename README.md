@@ -47,7 +47,7 @@ const darkTheme = createTheme({
 
 ### getLinearGradient(position)
 
-Returns a CSS linear gradient definition using the primary palette colour. By default, the gradient moves from the top left to bottom right, but you can pass any valid [`angle` or `side-or-corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient) to the `position` argument. This is useful if you're using a CSS-in-JS library like [emotion](https://emotion.sh).
+Returns a CSS linear gradient definition using the primary palette colour. By default, the gradient moves from the top left to bottom right, but you can pass any valid [`angle`](https://developer.mozilla.org/en-US/docs/Web/CSS/angle) or [`side-or-corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient#Values) value to the `position` argument. This is useful if you're using a CSS-in-JS library like [emotion](https://emotion.sh).
 
 ```js
 import {css} from 'emotion';
