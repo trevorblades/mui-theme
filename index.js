@@ -10,6 +10,11 @@ const heading = {
 
 const defaults = {
   overrides: {
+    MuiPickersCalendarHeader: {
+      transitionContainer: {
+        height: 27
+      }
+    },
     MuiFormControlLabel: {
       label: {
         lineHeight: 1
