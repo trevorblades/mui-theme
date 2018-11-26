@@ -12,7 +12,7 @@ const defaults = {
   overrides: {
     MuiPickersCalendarHeader: {
       transitionContainer: {
-        height: 27
+        height: 28
       }
     },
     MuiFormControlLabel: {
