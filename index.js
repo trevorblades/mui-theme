@@ -1,7 +1,7 @@
 const {default: grey} = require('@material-ui/core/colors/blueGrey');
 const {default: primary} = require('@material-ui/core/colors/indigo');
 const {createMuiTheme} = require('@material-ui/core/styles');
-const merge = require('lodash/merge');
+const merge = require('lodash/fp/merge');
 
 const heading = {
   fontFamily: "'Helvetica Neue', Helvetica, sans-serif",
@@ -39,8 +39,9 @@ const defaults = {
   }
 };
 
+const mergeDefaults = merge(defaults);
 function createTheme(options = {}) {
-  return createMuiTheme(merge(defaults, options));
+  return createMuiTheme(mergeDefaults(options));
 }
 
 module.exports = createTheme();
