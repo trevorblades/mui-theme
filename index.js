@@ -32,7 +32,7 @@ const defaults = {
   },
   typography: {
     useNextVariants: true,
-    fontFamily: "'Inconsolata', monospace",
+    fontFamily: 'Inconsolata, monospace',
     fontSize: 16,
     fontWeightMedium: 700,
     h1: heading,
