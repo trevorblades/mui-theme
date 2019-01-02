@@ -8,7 +8,7 @@ const heading = {
   fontWeight: 700
 };
 
-const defaults = {
+const config = {
   overrides: {
     MuiPickersCalendarHeader: {
       transitionContainer: {
@@ -44,12 +44,17 @@ const defaults = {
   }
 };
 
-const mergeDefaults = merge(defaults);
-function createTheme(options = {}) {
-  return createMuiTheme(mergeDefaults(options));
+function generateThemeCreator(defaults = {}) {
+  return function createTheme(options = {}) {
+    return createMuiTheme(merge({}, config, defaults, options));
+  };
 }
 
-module.exports = createTheme();
-module.exports.createTheme = createTheme;
-module.exports.getLinearGradient = (position = 'to bottom right') =>
+const createTheme = generateThemeCreator();
+
+exports.__esModule = true;
+exports.default = createTheme();
+exports.createTheme = createTheme;
+exports.generateThemeCreator = generateThemeCreator;
+exports.getLinearGradient = (position = 'to bottom right') =>
   `linear-gradient(${[position, primary[500], primary[900]]})`;
