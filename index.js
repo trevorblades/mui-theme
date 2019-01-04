@@ -50,7 +50,7 @@ function generateThemeCreator(defaults = {}) {
     const theme = createMuiTheme(merged);
 
     theme.mixins.linearGradient = function(
-      position = '45deg',
+      position = '135deg',
       color = 'primary'
     ) {
       const {light, dark} = theme.palette[color];
