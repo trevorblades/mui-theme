@@ -46,7 +46,18 @@ const config = {
 
 function generateThemeCreator(defaults = {}) {
   return function createTheme(options = {}) {
-    return createMuiTheme(merge({}, config, defaults, options));
+    const merged = merge({}, config, defaults, options);
+    const theme = createMuiTheme(merged);
+
+    theme.mixins.linearGradient = function(
+      position = '45deg',
+      color = 'primary'
+    ) {
+      const {light, dark} = theme.palette[color];
+      return `linear-gradient(${[position, light, dark]})`;
+    };
+
+    return theme;
   };
 }
 
@@ -56,5 +67,3 @@ exports.__esModule = true;
 exports.default = createTheme();
 exports.createTheme = createTheme;
 exports.generateThemeCreator = generateThemeCreator;
-exports.getLinearGradient = (position = 'to bottom right') =>
-  `linear-gradient(${[position, primary[500], primary[900]]})`;
