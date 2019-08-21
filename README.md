@@ -2,15 +2,15 @@
 
 [![Build Status](https://travis-ci.com/trevorblades/mui-theme.svg?branch=master)](https://travis-ci.com/trevorblades/mui-theme)
 
-A custom theme for use with the [Material-UI React component library](https://material-ui.com/). This theme uses [Inconsolata](https://fonts.google.com/specimen/Inconsolata) so make sure you import that from Google Fonts in some way.
+A custom theme for use with the [Material-UI React component library](https://material-ui.com/).
 
 ## Installation
 
-```shell
-$ npm install @trevorblades/mui-theme @material-ui/core
+```bash
+npm install @trevorblades/mui-theme @material-ui/core
 ```
 
-This theme uses [Inconsolata](https://fonts.google.com/specimen/Inconsolata) as its main font. To make it work, copy the following code into the `<head>` of your HTML document:
+This package assumes you're using `@material-ui/core` version 4 or newer. It also uses uses [Fira Mono](https://fonts.google.com/specimen/Fira+Mono) as its main body font. To make this work in your website, add the following code into the `<head>` of your HTML document:
 
 ```html
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
@@ -29,41 +29,4 @@ ReactDOM.render(
   </MuiThemeProvider>,
   document.getElementById('root')
 );
-```
-
-### createTheme(options)
-
-Merges your provided theme options my defaults. You can use this function to create a variation of this theme.
-
-```js
-import {createTheme} from '@trevorblades/mui-theme';
-
-const darkTheme = createTheme({
-  palette: {
-    type: 'dark'
-  }
-});
-```
-
-### getLinearGradient(position)
-
-Returns a CSS linear gradient definition using the primary palette colour. By default, the gradient moves from the top left to bottom right, but you can pass any valid [`angle`](https://developer.mozilla.org/en-US/docs/Web/CSS/angle) or [`side-or-corner`](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient#Values) value to the `position` argument. This is useful if you're using a CSS-in-JS library like [emotion](https://emotion.sh).
-
-```js
-import {css} from 'emotion';
-import {getLinearGradient} from '@trevorblades/mui-theme';
-
-const gradientClassName = css({
-  height: 24,
-  backgroundImage: getLinearGradient('to top left')
-});
-```
-
-This will create some CSS that looks something like this:
-
-```less
-.css-1ds8r9w {
-  height: 24px;
-  background-image: linear-gradient(to top left, #3f51b5, #1a237e);
-}
 ```
