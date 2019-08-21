@@ -19,9 +19,8 @@ This package assumes you're using `@material-ui/core` version 4 or newer. It als
 ## Usage
 
 ```js
-import Typography from '@material-ui/core/Typography';
-import theme from '@trevorblades/mui-theme';
-import {MuiThemeProvider} from '@material-ui/core/styles';
+import {MuiThemeProvider, Typography} from '@material-ui/core';
+import {theme} from '@trevorblades/mui-theme';
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
@@ -29,4 +28,21 @@ ReactDOM.render(
   </MuiThemeProvider>,
   document.getElementById('root')
 );
+```
+
+## Extending this theme
+
+If you want to add or change properties of this theme, you can use the `themeOptions` export instead of `theme`, and compose your own theme.
+
+```js
+// custom-theme.js
+import {createMuiTheme} from '@material-ui/core';
+import {themeOptions} from '@trevorblades/mui-theme';
+
+export const theme = createMuiTheme({
+  ...themeOptions,
+  overrides: {
+    // custom overrides here
+  }
+});
 ```

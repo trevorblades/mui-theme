@@ -1,5 +1,4 @@
-const blue = require('@material-ui/core/colors/blue');
-const red = require('@material-ui/core/colors/red');
+const {blue, red} = require('@material-ui/core/colors');
 const {createMuiTheme} = require('@material-ui/core/styles');
 
 const headingStyles = {
@@ -7,7 +6,7 @@ const headingStyles = {
   fontWeight: 700
 };
 
-const theme = createMuiTheme({
+const themeOptions = {
   palette: {
     primary: blue,
     secondary: red
@@ -34,6 +33,7 @@ const theme = createMuiTheme({
   shape: {
     borderRadius: 6
   }
-});
+};
 
-module.exports = theme;
+exports.themeOptions = themeOptions;
+exports.theme = createMuiTheme(themeOptions);
