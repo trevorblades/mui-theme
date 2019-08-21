@@ -1,6 +1,6 @@
 const blue = require('@material-ui/core/colors/blue');
 const red = require('@material-ui/core/colors/red');
-const createMuiTheme = require('@material-ui/core/styles/createMuiTheme');
+const {createMuiTheme} = require('@material-ui/core/styles');
 
 const headingStyles = {
   fontFamily: ["'Helvetica Neue'", 'Helvetica', 'sans-serif'].toString(),
