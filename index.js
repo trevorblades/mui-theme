@@ -37,3 +37,15 @@ const themeOptions = {
 
 exports.themeOptions = themeOptions;
 exports.theme = createMuiTheme(themeOptions);
+
+// for use with gatsby-theme-material-ui
+exports.webFontsConfig = {
+  fonts: {
+    google: [
+      {
+        family: 'Fira Mono',
+        variants: ['400', '500', '700']
+      }
+    ]
+  }
+};
