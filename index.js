@@ -32,6 +32,16 @@ const themeOptions = {
   },
   shape: {
     borderRadius: 6
+  },
+  overrides: {
+    MuiFab: {
+      extended: {
+        padding: '0 24px'
+      },
+      label: {
+        fontSize: '1rem'
+      }
+    }
   }
 };
 
