@@ -59,3 +59,21 @@ exports.webFontsConfig = {
     ]
   }
 };
+
+exports.LogoTitleProps = {
+  root: {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: 36
+  },
+  logo: {
+    height: '1em'
+  },
+  title: {
+    ml: 'calc(1em / 3)',
+    fontSize: '75%',
+    lineHeight: 'normal',
+    fontFamily: 'h5.fontFamily',
+    fontWeight: 'h5.fontWeight'
+  }
+};
