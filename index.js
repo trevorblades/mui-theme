@@ -67,7 +67,8 @@ exports.LogoTitleProps = {
     fontSize: 36
   },
   logo: {
-    height: '1em'
+    height: '1em',
+    flexShrink: 0
   },
   title: {
     ml: 'calc(1em / 3)',
